@@ -76,7 +76,7 @@ public class EventoController {
 		return "redirect:/{codigo}";
 	}
 	
-	@RequestMapping(value="/deletarEvento", method=RequestMethod.DELETE)
+	@RequestMapping("/deletarEvento")
 	public String deletarEvento(long codigo){
 		Evento evento = er.findByCodigo(codigo);
 		er.delete(evento);
